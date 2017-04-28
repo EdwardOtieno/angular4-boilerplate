@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { RestService } from './services/rest.service';
 import { LoginService }from './services/login.service';
+import { ProductService } from './services/product.service';
 
 import {
     AppComponent,
     LoginComponent,
-    ProductComponent
+    ProductComponent,
+    AddProductComponent
 } from './modules';
 
 @NgModule({
@@ -19,7 +21,8 @@ import {
     declarations: [
         AppComponent,
         LoginComponent,
-        ProductComponent
+        ProductComponent,
+        AddProductComponent
     ],
     imports: [
         AppRoutingModule,
@@ -32,7 +35,11 @@ import {
     ],
     providers: [
         RestService,
-        LoginService
+        LoginService,
+        ProductService
+    ],
+    entryComponents: [
+      AddProductComponent
     ]
 })
 export class AppModule {}
