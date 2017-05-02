@@ -17,10 +17,9 @@ export class LoginComponent {
     getLogin(form:LoginForm): void {
       let username = form.email;
       let password = form.password;
-      console.log(username+ " "+password);
+      console.log(username+ "-"+password);
       this.loginService.getAuthenticate(form).subscribe(() => {
-        console.log(" inside success");
-        this.router.navigate(['/product']);
+        this.router.navigate(['/calender']);
       });
     }
 }

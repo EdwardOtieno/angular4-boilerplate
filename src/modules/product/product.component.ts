@@ -6,7 +6,11 @@ import { ProductService } from '../../services/product.service';
 import { MdDialogRef } from '@angular/material';
 @Component({
     selector: 'product',
-    template: require('./product.component.html')
+    template: `
+    <button mdButton class="md-fab md-primary md-hue-2 addProduct" aria-label="Profile" (click)="openDialog()" >
+        add
+    </button>
+    `
 })
 export class ProductComponent {
    constructor(public dialog: MdDialog,public dialogRef:MdDialogRef<AddProductComponent>) {}
@@ -16,7 +20,7 @@ export class ProductComponent {
 }
 
 @Component({
-  selector: 'addproduct-component',
+  selector: 'addproduct',
   template: require('./add.product.html'),
 })
 export class AddProductComponent{
@@ -28,7 +32,7 @@ export class AddProductComponent{
   addProduct(product:Product){
       this.productService.addProduct(product).subscribe(() => {
       this.dialogRef.close();
-        // this.productService.getAllProducts();
+        //this.productService.getAllProducts();
       });
   }
 }

@@ -39,8 +39,20 @@ export class ProductService {
 		return this.restService.get('https://ft-anitrai011.vz2.dreamfactory.com/api/v2/db/_table/Product', this.setHeader())
 			.map(res => res)
 	}
-	// updateProductDetail(){
-	//   return this.restService.patch('https://ft-anitrai011.vz2.dreamfactory.com/api/v2/db/_table/Product',this.setHeader())
-	//     .map(res => res)
-	// }
+	updateProductDetail(product:any){
+		let body = {
+			"resource": [
+				{
+					"id":product.id,
+					"description": product.description,
+					"category": "mobile",
+					"price": product.price,
+					"title": product.title,
+					"available": product.available
+				}
+			]
+		}
+		  return this.restService.patch('https://ft-anitrai011.vz2.dreamfactory.com/api/v2/db/_table/Product',this.setHeader())
+		    .map(res => res)
+		}
 }

@@ -2,7 +2,7 @@ import { TestBed, ComponentFixture, async } from "@angular/core/testing";
 import { dispatchEvent } from "@angular/platform-browser/testing/src/browser_util";
 import { FormsModule } from "@angular/forms";
 import { By } from "@angular/platform-browser";
-import { DebugElement } from "@angular/core";
+import { DebugElement} from "@angular/core";
 import { LoginComponent } from './login.component';
 
 describe('my.component', () => {
