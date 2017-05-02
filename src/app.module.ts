@@ -10,7 +10,7 @@ import { LoginService }from './services/login.service';
 import { ProductService } from './services/product.service';
 import { CalendarModule } from 'angular-calendar';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
-import { DemoUtilsModule } from './modules/demo-utills/module'
+
 import {
     AppComponent,
     LoginComponent,
@@ -18,7 +18,8 @@ import {
     AddProductComponent,
     HeaderComponent,
     CalenderComponent,
-    SliderComponent
+    SliderComponent,
+    CalenderUtillComponent
 } from './modules';
 
 @NgModule({
@@ -42,7 +43,7 @@ import {
         BrowserAnimationsModule,
         CalendarModule.forRoot(),
         NgbModalModule.forRoot(),
-        DemoUtilsModule
+        CalenderUtillComponent
     ],
     providers: [
         RestService,

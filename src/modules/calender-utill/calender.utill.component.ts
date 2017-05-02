@@ -23,4 +23,4 @@ import { DateTimePickerComponent } from './date-time-picker.component';
     DateTimePickerComponent
   ]
 })
-export class DemoUtilsModule {}
+export class CalenderUtillComponent {}

@@ -7,13 +7,20 @@ pre {
   background-color: #f5f5f5;
   padding: 15px;
 }
-
+.red{
+  background-color: #FF1200!important;
+}
+.info{
+  background-color: #4FD5D6!important;
+}
 .cal-month-view .cal-header {
   text-align: center ;
   font-weight: bolder ; }
 
 .cal-month-view .cal-cell-row:hover {
-  background-color: #fafafa; }
+  background-color: #fafafa;
+
+ }
 
 .cal-month-view .cal-header .cal-cell {
   padding: 5px 0;
@@ -24,7 +31,10 @@ pre {
 
 .cal-month-view .cal-cell-row .cal-cell:hover,
 .cal-month-view .cal-cell.cal-has-events.cal-open {
-  background-color: #ededed; }
+  background-color: #ededed;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+ transition-delay: 0.2s;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);}
 
 .cal-month-view .cal-days {
   border: 1px solid #e1e1e1;
@@ -171,7 +181,10 @@ pre {
 
 .cal-week-view .cal-day-headers .cal-header:hover,
 .cal-week-view .cal-day-headers .cal-drag-over {
-  background-color: #ededed; }
+  background-color: #ededed;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+ transition-delay: 0.2s;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);}
 
 .cal-week-view .cal-day-headers span {
   font-weight: 400;

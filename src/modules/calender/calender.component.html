@@ -24,26 +24,26 @@
 <div class="row text-center">
   <div class="col-md-4">
     <div class="btn-group">
-      <div mdButton color="primary"
-        class="btn btn-primary"
+      <button md-raised-button
+        class="info"
         mwlCalendarPreviousView
         [view]="view"
         [(viewDate)]="viewDate">
         Previous
-      </div>
-      <div mdButton color="primary"
-        class="btn btn-secondary"
+      </button>
+      <button md-raised-button
+        class="info"
         mwlCalendarToday
         [(viewDate)]="viewDate">
         Today
-      </div>
-      <div mdButton
-        class="btn btn-primary"
+      </button>
+      <button md-raised-button
+        class="info"
         mwlCalendarNextView
         [view]="view"
         [(viewDate)]="viewDate">
         Next
-      </div>
+      </button>
     </div>
   </div>
   <div class="col-md-4">
@@ -51,24 +51,24 @@
   </div>
   <div class="col-md-4">
     <div class="btn-group">
-      <div mdButton
-        class="btn btn-primary"
+      <button md-raised-button
+        class="info"
         (click)="view = 'month'"
         [class.active]="view === 'month'">
         Month
-      </div>
-      <div mdButton
-        class="btn btn-primary"
+      </button>
+      <button md-raised-button
+        class="info"
         (click)="view = 'week'"
         [class.active]="view === 'week'">
         Week
-      </div>
-      <div mdButton
-        class="btn btn-primary"
+      </button>
+      <button md-raised-button
+        class="info"
         (click)="view = 'day'"
         [class.active]="view === 'day'">
         Day
-      </div>
+      </button>
     </div>
   </div>
 </div>
@@ -165,7 +165,7 @@
         </mwl-demo-utils-date-time-picker>
       </td>
       <td>
-        <button md-raised-button color="accent"
+        <button  class="red" md-raised-button
           (click)="events.splice(index, 1); refresh.next()">
           Delete
         </button>
