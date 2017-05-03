@@ -1,38 +1,38 @@
 <form #addProductForm="ngForm" (ngSubmit)="addProduct(product)">
-    <div layout-gt-sm="row">
-			<md-input-container>
-				<label>Title</label>
-				<input mdInput type="text" [(ngModel)]="product.title" id="title" name="title">
-			</md-input-container>
-		</div>
-			    <div layout-gt-sm="row">
-			<md-input-container>
-				<label>Description</label>
-				 <textarea [(ngModel)]="product.description" name="description" mdInput></textarea>
-			</md-input-container>
-		</div>
-		<div layout-gt-sm="row">
-			<md-input-container>
-				<label>Price</label>
-				<input mdInput type="number" [(ngModel)]="product.price" id="price" name="price">
-			</md-input-container>
-		</div>
-		 <div layout-gt-sm="row">
-			<md-input-container>
-				<label>Available</label>
-				<input mdInput type="number" [(ngModel)]="product.available" id="available" name="available">
-			</md-input-container>
-		</div>
-		    <div layout-gt-sm="row">
-				<label>Category</label>
-				<md-select  [(ngModel)]="product.category" name="category" required>
-					<md-option  [value]="mobile">Mobile
-					</md-option>
-					<md-option  [value]="computer">Computer
-					</md-option>
-				</md-select>
-			</div>
-			<div layout-gt-sm="row">
-			<button mdButton type=submit class="md-raised md-primary md-accent md-raised md-hue-3">Add Product</button>
-		</div>
+	<div layout-gt-sm="row">
+		<md-input-container>
+			<label>Title</label>
+			<input mdInput type="text" [(ngModel)]="product.title" id="title" name="title">
+		</md-input-container>
+	</div>
+	<div layout-gt-sm="row">
+		<md-input-container>
+			<label>Description</label>
+			<textarea [(ngModel)]="product.description" name="description" mdInput></textarea>
+		</md-input-container>
+	</div>
+	<div layout-gt-sm="row">
+		<md-input-container>
+			<label>Price</label>
+			<input mdInput type="number" [(ngModel)]="product.price" id="price" name="price">
+		</md-input-container>
+	</div>
+	<div layout-gt-sm="row">
+		<md-input-container>
+			<label>Available</label>
+			<input mdInput type="number" [(ngModel)]="product.available" id="available" name="available">
+		</md-input-container>
+	</div>
+	<div layout-gt-sm="row">
+		<label>Category</label>
+		<md-select [(ngModel)]="product.category" name="category" required>
+			<md-option [value]="mobile">Mobile
+			</md-option>
+			<md-option [value]="computer">Computer
+			</md-option>
+		</md-select>
+	</div>
+	<div layout-gt-sm="row">
+		<button mdButton type=submit class="md-raised md-primary md-accent md-raised md-hue-3">Add Product</button>
+	</div>
 </form>

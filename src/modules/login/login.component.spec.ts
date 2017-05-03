@@ -11,17 +11,17 @@ describe('my.component', () => {
         fixture: ComponentFixture<LoginComponent>;
 
     beforeEach(async(() => {
-            TestBed.configureTestingModule({
-                imports: [FormsModule],
-                declarations: [
-                    LoginComponent
-                ]
-            }).compileComponents().then(() => {
-                fixture = TestBed.createComponent(LoginComponent);
-                comp = fixture.componentInstance;
-                fixture.detectChanges();
-            });
-        })
+		TestBed.configureTestingModule({
+			imports: [FormsModule],
+			declarations: [
+				LoginComponent
+			]
+		}).compileComponents().then(() => {
+			fixture = TestBed.createComponent(LoginComponent);
+			comp = fixture.componentInstance;
+			fixture.detectChanges();
+		});
+	})
     );
     it('should handle inputs', () => {
         const sendInputs = (inputs: Array<DebugElement>) => {

@@ -1,19 +1,19 @@
 <form #loginForm="ngForm">
-  <md-card>
-    <md-card-title> Dreamfactory - Addressbook 2.0 </md-card-title>
-    <md-divider></md-divider>
-    <md-card-content  layout-align="center center">
-        <md-input-container >
-          <label>Email</label>
-          <input mdInput type="email" [(ngModel)]="form.email" id="email" name="email">
-        </md-input-container>
-        <md-input-container >
-          <label>Password</label>
-          <input mdInput type="password" [(ngModel)]="form.password" id="password" name="password">
-        </md-input-container>
-    </md-card-content>
-    <md-card-actions layout="row" layout-align="center center">
-          <button mdButton (click)="getLogin(form)" class="md-raised md-primary">Login</button>
-    </md-card-actions>
- </md-card>
+	<md-card layout-align="center center">
+		<md-card-title> Dreamfactory - Addressbook 2.0 </md-card-title>
+		<md-divider></md-divider>
+		<md-card-content layout-align="center center">
+			<md-input-container>
+				<label>Email</label>
+				<input mdInput type="email" [(ngModel)]="form.email" id="email" name="email">
+			</md-input-container>
+			<md-input-container>
+				<label>Password</label>
+				<input mdInput type="password" [(ngModel)]="form.password" id="password" name="password">
+			</md-input-container>
+		</md-card-content>
+		<md-card-actions layout="row" layout-align="center center">
+			<button md-raised-button (click)="getLogin(form)" color="accent">Login</button>
+		</md-card-actions>
+	</md-card>
 </form>

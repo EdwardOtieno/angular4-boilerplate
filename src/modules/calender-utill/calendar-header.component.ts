@@ -1,8 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'mwl-demo-utils-calendar-header',
-  template: `
+	selector: 'mwl-demo-utils-calendar-header',
+	template: `
     <div class="row text-center">
       <div class="col-md-4">
         <div class="btn-group">
@@ -62,14 +62,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CalendarHeaderComponent {
 
-  @Input() view: string;
+	@Input() view: string;
 
-  @Input() viewDate: Date;
+	@Input() viewDate: Date;
 
-  @Input() locale: string = 'en';
+	@Input() locale: string = 'en';
 
-  @Output() viewChange: EventEmitter<string> = new EventEmitter();
+	@Output() viewChange: EventEmitter<string> = new EventEmitter();
 
-  @Output() viewDateChange: EventEmitter<Date> = new EventEmitter();
+	@Output() viewDateChange: EventEmitter<Date> = new EventEmitter();
 
 }

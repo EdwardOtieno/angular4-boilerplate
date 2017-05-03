@@ -1,0 +1,99 @@
+<header></header>
+<md-card class="result">
+	<md-card-title>Slider Component</md-card-title>
+	<md-card-content>
+		<md-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step" [thumb-label]="thumbLabel" [tick-interval]="5" value="value" [vertical]="vertical">
+		</md-slider>
+	</md-card-content>
+</md-card>
+<br><br>
+<md-card>
+	<md-card-title>Chip component</md-card-title>
+	<md-card-content>
+		<md-chip-list>
+			<md-chip>01</md-chip>
+			<md-chip>02</md-chip>
+			<md-chip color="warn" selected="true">Warn chip</md-chip>
+			<md-chip color="primary" selected="true">Primary chip</md-chip>
+			<md-chip color="accent" selected="true">Accent chip</md-chip>
+		</md-chip-list>
+	</md-card-content>
+</md-card>
+<br><br>
+<md-card>
+	<md-card-title>Progress spinner component</md-card-title>
+	<md-card-content>
+		<div class="row">
+			<md-spinner></md-spinner>
+			<md-spinner color="warn"></md-spinner>
+			<md-spinner color="accent"></md-spinner>
+		</div>
+	</md-card-content>
+</md-card>
+<br><br>
+<md-card>
+	<md-card-title>Progress Bar component</md-card-title>
+	<md-card-content>
+		<md-progress-bar mode="indeterminate"></md-progress-bar>
+	</md-card-content>
+	<md-card-content>
+		<md-progress-bar color="accent" mode="determinate" value="78"></md-progress-bar>
+	</md-card-content>
+	<md-card-content>
+		<md-progress-bar color="warn" mode="determinate" value="19"></md-progress-bar>
+	</md-card-content>
+	<md-card-content>
+		<md-progress-bar color="primary" mode="determinate" value="58" bufferValue="5"></md-progress-bar>
+	</md-card-content>
+</md-card>
+<md-card>
+	<md-card-title>success/error snack-bar</md-card-title>
+	<button md-raised-button (click)="openSnackBar('Invalid credentials')" color="primary">Show snack-bar</button>
+</md-card>
+<md-card>
+	<md-card-title>Tab and list</md-card-title>
+	<md-card-content>
+		<md-tab-group>
+			<md-tab label="List Demo">
+				<md-list>
+					<h3 md-subheader>Folders</h3>
+					<md-list-item *ngFor="let folder of folders">
+						<md-icon md-list-icon>folder</md-icon>
+						<h4 md-line>{{folder.name}}</h4>
+						<p md-line> {{folder.updated | date}} </p>
+						<md-divider></md-divider>
+					</md-list-item>
+				</md-list>
+			</md-tab>
+			<md-tab label="Card Demo">
+				<md-card class="example-card">
+					<md-card-header>
+						<div md-card-avatar class="example-header-image"></div>
+						<md-card-title>Shiba Inu</md-card-title>
+						<md-card-subtitle>Dog Breed</md-card-subtitle>
+					</md-card-header>
+					<img md-card-image src="http://68.media.tumblr.com/2d4dfb9e54288e9b59e7cb5c73a0a5f3/tumblr_nax7fn4sjG1qa3nnoo1_500.jpg">
+					<md-card-content>
+						<p>
+							The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting. The Shiba Inu is the smallest of the six original
+							and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting . The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+							Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting. The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+							very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+						</p>
+					</md-card-content>
+					<md-card-actions>
+						<button md-button>LIKE</button>
+						<button md-button>SHARE</button>
+					</md-card-actions>
+				</md-card>
+			</md-tab>
+			<md-tab label="Grid Demo">
+				<md-grid-list cols="4" rowHeight="100px">
+					<md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+						{{tile.text}}
+					</md-grid-tile>
+				</md-grid-list>
+			</md-tab>
+		</md-tab-group>
+	</md-card-content>
+</md-card>

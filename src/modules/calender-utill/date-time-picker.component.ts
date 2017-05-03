@@ -1,33 +1,33 @@
 import {
-  Component,
-  Input,
-  Output,
-  EventEmitter,
-  SimpleChanges,
-  OnChanges
+	Component,
+	Input,
+	Output,
+	EventEmitter,
+	SimpleChanges,
+	OnChanges
 } from '@angular/core';
 import {
-  getSeconds,
-  getMinutes,
-  getHours,
-  getDate,
-  getMonth,
-  getYear,
-  setSeconds,
-  setMinutes,
-  setHours,
-  setDate,
-  setMonth,
-  setYear
+	getSeconds,
+	getMinutes,
+	getHours,
+	getDate,
+	getMonth,
+	getYear,
+	setSeconds,
+	setMinutes,
+	setHours,
+	setDate,
+	setMonth,
+	setYear
 } from 'date-fns';
 import {
-  NgbDateStruct,
-  NgbTimeStruct
+	NgbDateStruct,
+	NgbTimeStruct
 } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'mwl-demo-utils-date-time-picker',
-  template: `
+	selector: 'mwl-demo-utils-date-time-picker',
+	template: `
     <form class="form-inline">
       <div class="form-group">
         <div class="input-group">
@@ -48,7 +48,7 @@ import {
     </form>
     <ngb-timepicker [(ngModel)]="timeStruct" (ngModelChange)="updateTime()" [meridian]="true"></ngb-timepicker>
   `,
-  styles: [`
+	styles: [`
     .form-group {
       width: 100%;
     }
@@ -56,39 +56,39 @@ import {
 })
 export class DateTimePickerComponent implements OnChanges {
 
-  @Input() placeholder: string;
+	@Input() placeholder: string;
 
-  @Input() date: Date;
+	@Input() date: Date;
 
-  @Output() dateChange: EventEmitter<Date> = new EventEmitter();
+	@Output() dateChange: EventEmitter<Date> = new EventEmitter();
 
-  dateStruct: NgbDateStruct;
+	dateStruct: NgbDateStruct;
 
-  timeStruct: NgbTimeStruct;
+	timeStruct: NgbTimeStruct;
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['date']) {
-      this.dateStruct = {
-        day: getDate(this.date),
-        month: getMonth(this.date) + 1,
-        year: getYear(this.date)
-      };
-      this.timeStruct = {
-        second: getSeconds(this.date),
-        minute: getMinutes(this.date),
-        hour: getHours(this.date)
-      };
-    }
-  }
+	ngOnChanges(changes: SimpleChanges): void {
+		if (changes['date']) {
+			this.dateStruct = {
+				day: getDate(this.date),
+				month: getMonth(this.date) + 1,
+				year: getYear(this.date)
+			};
+			this.timeStruct = {
+				second: getSeconds(this.date),
+				minute: getMinutes(this.date),
+				hour: getHours(this.date)
+			};
+		}
+	}
 
-  updateDate(): void {
-    const newDate: Date = setYear(setMonth(setDate(this.date, this.dateStruct.day), this.dateStruct.month - 1), this.dateStruct.year);
-    this.dateChange.next(newDate);
-  }
+	updateDate(): void {
+		const newDate: Date = setYear(setMonth(setDate(this.date, this.dateStruct.day), this.dateStruct.month - 1), this.dateStruct.year);
+		this.dateChange.next(newDate);
+	}
 
-  updateTime(): void {
-    const newDate: Date = setHours(setMinutes(setSeconds(this.date, this.timeStruct.second), this.timeStruct.minute), this.timeStruct.hour);
-    this.dateChange.next(newDate);
-  }
+	updateTime(): void {
+		const newDate: Date = setHours(setMinutes(setSeconds(this.date, this.timeStruct.second), this.timeStruct.minute), this.timeStruct.hour);
+		this.dateChange.next(newDate);
+	}
 
 }

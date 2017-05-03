@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule , FormsModule} from '@angular/forms';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule, MdDialogRef } from '@angular/material';
@@ -18,12 +18,12 @@ import {
     AddProductComponent,
     HeaderComponent,
     CalenderComponent,
-    SliderComponent,
+    WidgetComponent,
     CalenderUtillComponent
 } from './modules';
 
 @NgModule({
-    bootstrap: [ AppComponent ],
+    bootstrap: [AppComponent],
     declarations: [
         AppComponent,
         LoginComponent,
@@ -31,7 +31,7 @@ import {
         AddProductComponent,
         HeaderComponent,
         CalenderComponent,
-        SliderComponent
+        WidgetComponent
     ],
     imports: [
         AppRoutingModule,
@@ -51,7 +51,7 @@ import {
         ProductService
     ],
     entryComponents: [
-      ProductComponent
+		ProductComponent
     ]
 })
-export class AppModule {}
+export class AppModule { }
