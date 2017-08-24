@@ -2,7 +2,7 @@ import { TestBed, ComponentFixture, async } from "@angular/core/testing";
 import { dispatchEvent } from "@angular/platform-browser/testing/src/browser_util";
 import { FormsModule } from "@angular/forms";
 import { By } from "@angular/platform-browser";
-import { DebugElement } from "@angular/core";
+import { DebugElement} from "@angular/core";
 import { LoginComponent } from './login.component';
 
 describe('my.component', () => {
@@ -11,17 +11,17 @@ describe('my.component', () => {
         fixture: ComponentFixture<LoginComponent>;
 
     beforeEach(async(() => {
-            TestBed.configureTestingModule({
-                imports: [FormsModule],
-                declarations: [
-                    LoginComponent
-                ]
-            }).compileComponents().then(() => {
-                fixture = TestBed.createComponent(LoginComponent);
-                comp = fixture.componentInstance;
-                fixture.detectChanges();
-            });
-        })
+		TestBed.configureTestingModule({
+			imports: [FormsModule],
+			declarations: [
+				LoginComponent
+			]
+		}).compileComponents().then(() => {
+			fixture = TestBed.createComponent(LoginComponent);
+			comp = fixture.componentInstance;
+			fixture.detectChanges();
+		});
+	})
     );
     it('should handle inputs', () => {
         const sendInputs = (inputs: Array<DebugElement>) => {

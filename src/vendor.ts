@@ -7,3 +7,7 @@ import 'zone.js/dist/long-stack-trace-zone';
 import '@angular/platform-browser';
 
 import 'rxjs';
+
+import 'hammerjs';
+import 'angular-calendar/dist/css/angular-calendar.css';
+import '@ng-bootstrap/ng-bootstrap';
